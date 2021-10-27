@@ -17,11 +17,11 @@ public class Showmenu {
 			option = Integer.parseInt(Validation.checkRegex(Regex.NUM, "Choose length data:"));
 			if(option > 0) {
 				algorithm.CreateArray(option);
-				algorithm.SumMinMax(option);
-				algorithm.MinMax(option);
+				algorithm.SumMinMax();
+				algorithm.MinMax();
 				algorithm.Even();
 				algorithm.Odd();
-				algorithm.CountTotal(option);
+				algorithm.CountTotal();
 			}
 			System.out.println("Ban co muon tiep tuc khong ? y / n");
 			repeat = sc.nextLine();
