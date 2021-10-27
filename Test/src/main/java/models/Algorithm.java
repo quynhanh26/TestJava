@@ -13,7 +13,7 @@ public class Algorithm {
 	
 	public void CreateArray(int parseInt) {
 		try {
-			for(int i =0; i< parseInt ;i++) {
+			for(int i = 0; i< parseInt ;i++) {
 				int a = random.nextInt(99) + 1;
 				arrayList.add(a);
 				total += a;
@@ -27,9 +27,15 @@ public class Algorithm {
 	
 	public void SumMinMax(int parseInt) {
 		Collections.sort(arrayList);
-		summax = total - arrayList.get(0);
-		int length = parseInt - 1;
-		summin = total - arrayList.get(length);
+		if(parseInt == 1) {
+			summax = arrayList.get(0);
+			summin = arrayList.get(0);
+		}else {
+			summax = total - arrayList.get(0);
+			int length = parseInt - 1;
+			summin = total - arrayList.get(length);
+		}
+		
 		System.out.println("Minimum sum: "+summin + " Maximum sum: " + summax);
 	}
 
